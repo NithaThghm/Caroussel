@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caroussel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <button id="btnOnOff" class="btnOnOff" role="switch" aria-checked="true"></button> -->
+    <div class="point">
+        <div id="pointImg1" class="pointImg1 red"></div>
+        <div id="pointImg2" class="pointImg2"></div>
+        <div id="pointImg3" class="pointImg3"></div>
+    </div>
+    <img id="carousselLeft" class="carousselLeft" src="./imgs/left.svg" alt="Boutton gauche" onclick="changeImg(this)">
+    <div class="carousselContainer">
+        <img id="carousselImg1" class="carousselImg1" src="./imgs/img1.jpg" alt="image du Caroussel">
+        <img id="carousselImg2" class="carousselImg2" src="./imgs/img2.jpg" alt="image du Caroussel">
+        <img id="carousselImg3" class="carousselImg3" src="./imgs/img3.jpg" alt="image du Caroussel">
+    </div>
+    <img id="carousselRight" class="carousselRight" src="./imgs/right.svg" alt="Bouton droit" onclick="changeImg(this)">
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+*, ::before, :after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f1f1;
+    height: 100vh;
+    width: 100vw;
+    /* overflow-y: hidden; */
+  }
+
+/* .... SWITCH */
+
+.btnOnOff {
+    width: 52px;
+    height: 32px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    background-color: #49454f;
+    border-radius: 24px;
+    border: solid 2px #938f99;
+    transition: border-color 200ms, background-color 200ms;
+    cursor: pointer;
+  }
+  .btnOnOff::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 12px;
+    background-color: #938f99;
+    transition: width 200ms, height 200ms, transform 200ms, background-color 200ms;
+  }
+  .btnOnOff.on {
+    border-color: #d0bcff;
+    background-color: #d0bcff;
+  }
+  .btnOnOff.on::before {
+    background-color: #381e72;
+    width: 24px;
+    height: 24px;
+    transform: translateX(18px);
+  }
+
+  .carousselContainer{
+    display: flex;
+    height: 100vh;
+    width: fit-content;
+  }
+
+  .carousselImg1{
+    display: block;
+    height : 100%;
+    width: 100vw;
+  }
+
+  .carousselImg2{
+    display: block;
+    height : 100%;
+    width: 100vw;
+  }
+
+  .carousselImg3{
+    display: none;
+    height : 100%;
+    width: 100vw;
+  }
+
+  .carousselLeft, .carousselRight{
+    position: absolute;
+    display: block;
+    margin: auto;
+    height: 50px;
+    width: 50px;
+    outline: solid 2px black;
+    background-color: white;
+  }
+
+  .carousselLeft{
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .carousselRight{
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .point{
+    position: absolute;
+    display: flex;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 200px;
+    justify-content: space-evenly;
+    margin: auto;
+  }
+
+  .pointImg1, .pointImg2, .pointImg3{
+    content: '';
+    height: 10px;
+    width: 10px;
+    background-color: white;
+    border-radius: 50%;
+  }
+
+  .red{
+    background-color: red;
+  }
+
+  .moveLeft{
+    animation-name: toLeft;
+    animation-duration: 1s;
+ }
+
+ @keyframes toLeft {
+    from {
+        transform: translateX(100%);
+    }
+    to{
+        transform: translate(0);
+    }
+ }
+
+ .moveOut{
+    animation-name: goOutLeft;
+    animation-duration: 1s;
+ }
+
+ @keyframes goOutLeft {
+    from {
+        transform: translateX(0);
+    }
+    to{
+        transform: translate(-100%);
+    }
+ }
+
