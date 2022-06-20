@@ -1,15 +1,15 @@
 /* .... SWITCH */
 
-// const btnOnOff = document.getElementById("switch");
+const btnOnOff = document.getElementById("switch");
 
-// btnOnOff.addEventListener("click", (event) => {
-//   if (btnOnOff.classList.contains("on")) {
-//     btnOnOff.setAttribute("aria-checked", "false");
-//   } else {
-//     btnOnOff.setAttribute("aria-checked", "true");
-//   }
-//   btnOnOff.classList.toggle("on");
-// });
+btnOnOff.addEventListener("click", (event) => {
+  if (btnOnOff.classList.contains("on")) {
+    btnOnOff.setAttribute("aria-checked", "false");
+  } else {
+    btnOnOff.setAttribute("aria-checked", "true");
+  }
+  btnOnOff.classList.toggle("on");
+});
 
 /* .... Fonction au click changer la source de l'image */
 
