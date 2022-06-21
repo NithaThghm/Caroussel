@@ -1,18 +1,4 @@
-/* .... SWITCH */
-
-const btnOnOff = document.getElementById("switch");
-
-btnOnOff.addEventListener("click", (event) => {
-  if (btnOnOff.classList.contains("on")) {
-    btnOnOff.setAttribute("aria-checked", "false");
-  } else {
-    btnOnOff.setAttribute("aria-checked", "true");
-  }
-  btnOnOff.classList.toggle("on");
-});
-
 /* .... Fonction au click changer la source de l'image */
-
 
 const carousselLeft = document.getElementById("carousselLeft");
 const carousselRight = document.getElementById("carousselRight");
@@ -26,20 +12,21 @@ function changeImg(element){
     let pointImg1 = document.getElementById("pointImg1");
     let pointImg2 = document.getElementById("pointImg2");
     let pointImg3 = document.getElementById("pointImg3");
-    console.log(carousselImg1.src);
     let array = [window.getComputedStyle(carousselImg1).display, window.getComputedStyle(carousselImg2).display,window.getComputedStyle(carousselImg3).display]
 
-        console.log(array);
-        if(element.id == "carousselLeft"){
-            console.log(element.id);
+        if(element.id == "carousselRight"){
+            console.log(element.id)
+            console.log(array)
             for (const img of array){
                 if(img == "block"){
                     if(array.indexOf(img) == 0){
-                        carousselImg2.style.display ="block";
+                        console.log(array)
                         carousselImg1.style.display = "none";
+                        carousselImg2.style.display ="block";
+                        carousselImg3.style.display = "none";
+                        console.log(array)
                         pointImg1.classList.toggle("red");
                         pointImg2.classList.toggle("red");
-                        carousselImg3.style.display = "none";
                     }
                     else if(array.indexOf(img) == 1){
                         carousselImg1.style.display = "none";

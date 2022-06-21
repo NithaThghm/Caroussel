@@ -12,40 +12,6 @@
     /* overflow-y: hidden; */
   }
 
-/* .... SWITCH */
-
-.btnOnOff {
-    width: 52px;
-    height: 32px;
-    padding: 4px;
-    display: flex;
-    align-items: center;
-    background-color: #49454f;
-    border-radius: 24px;
-    border: solid 2px #938f99;
-    transition: border-color 200ms, background-color 200ms;
-    cursor: pointer;
-  }
-  .btnOnOff::before {
-    content: "";
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    border-radius: 12px;
-    background-color: #938f99;
-    transition: width 200ms, height 200ms, transform 200ms, background-color 200ms;
-  }
-  .btnOnOff.on {
-    border-color: #d0bcff;
-    background-color: #d0bcff;
-  }
-  .btnOnOff.on::before {
-    background-color: #381e72;
-    width: 24px;
-    height: 24px;
-    transform: translateX(18px);
-  }
-
   .carousselContainer{
     display: flex;
     height: 100vh;
@@ -59,7 +25,7 @@
   }
 
   .carousselImg2{
-    display: block;
+    display: none;
     height : 100%;
     width: 100vw;
   }
